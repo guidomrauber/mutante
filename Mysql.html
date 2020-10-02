@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://cpanel.tonohost.com/panel/indexpl.php?option=mysql -->
+<html lang="english" dir="ltr" data-style="basic"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title> Mysql</title>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Chrome, Firefox OS and Opera -->
+        <meta name="theme-color" content="#293a4a">
+
+        <!-- Mobile Chrome-->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-status-bar-style" content="default">
+
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        
+        <link rel="shortcut icon" href="https://cpanel.tonohost.com/panel/pl-res/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css" href="./Mysql_files/original.master-ltr.cmb.min.css">
+ <link rel="stylesheet" type="text/css" href="./Mysql_files/chosen.min.css">
+
+        <style type="text/css">                /* Embedding: /usr/local/cpanel/base/frontend/paper_lantern/home/dashboard.min.css */
+                #cpanel_body{max-width:none}.panel-widget{border-radius:3px;box-shadow:0 0 3px rgba(0,0,0,.2);height:auto;border:0;margin-bottom:15px;display:table;width:100%;max-width:100%}.widget-heading{border:1px solid #293a4a;background-color:rgba(41,58,74,.95);color:#fff;text-transform:uppercase}.widget-heading .close{color:#fff;opacity:1}.widget-draggable{cursor:move}.group-header-indicator{cursor:pointer}html[dir="rtl"] .pull-right{float:left!important}.alert-list{margin:0;padding:0;width:100%}.alert-item{padding:0 8px;display:inline-block;width:50%;vertical-align:top;float:left;zoom:1;*display:inline}html[dir="rtl"] .alert-item{float:right}@media(max-width:767px){.alert-item{width:100%;padding:0 8px}}.drag{opacity:.5}.drag+.drag-over,#content .drag-hidden{margin:0;height:0;outline-style:none}.drag-over{outline-style:dashed;height:80px;margin:10px 0}.drop-area{padding:5px 0}#jump-search{margin-bottom:5px}.icon-menu-section{margin-bottom:5px}.icon-container-body{padding-left:15px;padding-top:15px;clear:both;margin-left:0;margin-right:0;overflow:hidden;width:100%}html[dir="rtl"] .icon-container-body{padding-right:15px;padding-left:0}.item{float:left;height:60px;padding:0;text-align:left}html[dir="rtl"] .item{text-align:right;float:right}.icon{display:block;margin:auto}.itemContentWrapper{padding:0;width:100%}.itemImageWrapper{display:inline-block;vertical-align:middle}.itemTextWrapper{padding:10px 0 10px 5px;display:inline-block;vertical-align:middle;width:200px}html[dir="rtl"] .itemTextWrapper{padding:10px 5px 10px 0}.icon-menu-section .close,.icon-menu-section .close:hover,.icon-menu-section .close:active,.icon-menu-section .close:focus{opacity:1;color:#fff}@media(min-width:992px){html[dir="ltr"] #stats{padding-left:0}html[dir="rtl"] #stats{padding-right:0}}.app-name{text-transform:capitalize;padding:0 0 5px 0;display:block;word-break:break-all}.general-info-label{text-transform:capitalize;display:block}.general-info-value{display:block}.progress{margin:5px 0 5px 0}.progress-bar-disabled{background-color:#b2b2b2}.progress{height:4px;border-radius:0;box-shadow:none;background:#c8c8c8}.progress .progress-bar{box-shadow:none}.warning .app-stat-upgrade .fa-exclamation-triangle{color:#8a6d3b}.danger .app-stat-upgrade .fa-exclamation-triangle{color:#a94442}.success .progress-bar{background-color:#5cb85c}.info .progress-bar{background-color:#5bc0de}.warning .progress-bar{background-color:#f0ad4e}.danger .progress-bar{background-color:#d9534f}#statsSection tr.success.app-stat-row,#statsSection tr.info.app-stat-row{border-left:none}#statsSection tr.success td,#statsSection tr.info td{background:0}#statsSection .app-stat-upgrade{width:50px;padding:0;line-height:75px;text-align:center}.app-stat-upgrade a{display:none;height:100%;width:100%;text-align:center;color:#fff;background-color:#428bca}.warning>.app-stat-upgrade>a>i,.danger>.app-stat-upgrade>a>i{vertical-align:middle}.warning>.app-stat-upgrade>a,.danger>.app-stat-upgrade>a{display:inline-block}.updating-elements{display:inline-block}.application-list-loading-indicator{margin:auto;font-weight:500;font-size:36px;text-align:center;vertical-align:middle;padding:20px 0}                /* Embedding: /usr/local/cpanel/base/frontend/paper_lantern/css/angular-chosen-spinner.min.css */
+                .localytics-chosen.loading+.chosen-container-multi .chosen-choices{background-image:url('images/spinner.gif');background-repeat:no-repeat;background-position:98%}html[dir="rtl"] .localytics-chosen.loading+.chosen-container-multi .chosen-choices{background-position:2%}.localytics-chosen.loading+.chosen-container-single .chosen-single span{background:url('images/spinner.gif') no-repeat right}html[dir="rtl"] .localytics-chosen.loading+.chosen-container-single .chosen-single span{background:url('images/spinner.gif') no-repeat left}.localytics-chosen.loading+.chosen-container-single .chosen-single .search-choice-close{display:none}        </style>
+
+        <script src="./Mysql_files/osd.js.descarga"></script><script src="./Mysql_files/f(4).txt"></script><script src="./Mysql_files/f(5).txt" id="google_shimpl"></script><script>
+            (function(){
+                window.PAGE = {};
+                window.NVData = {};
+                window.thisTheme = "paper_lantern";
+            })();
+            /*
+# cjt/e2e.js                                      Copyright(c) 2015 cPanel, Inc.
+#                                                           All rights Reserved.
+# copyright@cpanel.net                                         http://cpanel.net
+# This code is subject to the cPanel license. Unauthorized copying is prohibited
+*/
+
+(function() {
+    window.__collectedErrors = [];
+    window.onerror = function(error) {
+        if (window.__isE2E) {
+            window.__collectedErrors[window._collectedErrors.length] = error;
+        }
+    };
+    window.getJavascriptErrors = function() {
+        return window.__collectedErrors;
+    };
+    window.clearJavascriptErrors = function() {
+        window.__collectedErrors = [];
+    };
+})();
+
+        </script>
+
+
+            <script type="text/javascript" src="./Mysql_files/master-legacy.cmb.min.js.descarga"></script>
+        
+            <script type="text/javascript" src="./Mysql_files/cjt-min.js.descarga"></script>
+          
+          <script>
+              CPANEL.validate.hide_validation_summary = true;
+          </script>
+        
+
+
+
+        <!-- custom style css file (styles.css) should go here -->
+        <link rel="stylesheet" type="text/css" href="./Mysql_files/icon_spritemap.css">
+        <link rel="stylesheet" type="text/css" href="./Mysql_files/styles.css">
+
+
+    <link rel="preload" href="./Mysql_files/f(6).txt" as="script"><script type="text/javascript" src="./Mysql_files/f(6).txt"></script><link rel="preload" href="./Mysql_files/f(7).txt" as="script"><script type="text/javascript" src="./Mysql_files/f(7).txt"></script></head>
+    <body id="cpanel_body" class="yui-skin-sam">
+
+        <div id="wrap" style="height: auto !important; min-height: 0px !important;">
+    <header id="masterAppContainer" ng-controller="applicationListController">
+        <div class="navbar navbar-inverse navbar-cpanel navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="btnSideBarToggle" class="cp-nav-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="cp-icon-bar"></span>
+                        <span class="cp-icon-bar"></span>
+                        <span class="cp-icon-bar"></span>
+                    </button>
+
+                    
+                        <a id="lnkHeaderHome" class="navbar-brand" target="_top" href="https://cpanel.tonohost.com/panel/indexpl.php" title="Home">
+                            <img id="imgLogo" class="navbar-brand-logo" src="./Mysql_files/vplogo.png" alt=""><font style="vertical-align: sub;">
+
+
+</font>
+                        </a>
+                    
+
+                    <script type="text/ng-template" id="customTemplate.html">
+                      <a href="{{ match.model.url }}" ng-attr-target="{{match.model.target}}" ng-bind-html="match.model.name">
+                      </a>
+                    </script>
+<div class="navbar-preferences form-inline">
+
+                        <div class="btn-group">
+                            <button id="btnUserPref" data-toggle="dropdown" class="btn dropdown-toggle user-preferences-btn">
+                                <span id="userImg" class="glyphicon glyphicon-user"></span>
+                                <span id="lblUserNameTxt" class="hidden-inline-xs">ottos_26874369</span>
+                                <span id="caretImg" class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                
+                                <li>
+                                    <a id="lnkUserPrefChangePwd" href="https://cpanel.tonohost.com/panel/indexpl.php?option=passwordchange&amp;ttt=-11360641724476416">Change Password</a>
+                                </li>
+                        <li>
+                                    <a id="lnkUserPrefChangeLang" href="https://cpanel.tonohost.com/panel/indexpl.php?option=changelanguage&amp;ttt=-11360641724476416">Change Language</a>
+                                </li>
+        
+                                
+                                
+                                <li>
+                                    <a id="lnkUserPrefUpdateContactInfo" href="https://cpanel.tonohost.com/panel/indexpl.php?option=changeemail&amp;ttt=-11360641724476416">Update Contact Email                                    </a>
+                                </li>
+                                
+                                
+                                
+                                
+                                
+
+                                <li>
+                                    <a id="lnkUserPrefResetInterface" href="javascript:void(0)" onclick="reset_all_interface_settings()">
+                                       Reset Page Settings 
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+                        <a id="lnkHeaderLogout" target="_top" href="https://cpanel.tonohost.com/panel/indexpl.php?option=signout" class="btn link-buttons">
+                            <span id="logoutImg" class="glyphicon glyphicon-log-out"></span>
+                            <span id="lblLogout" class="hidden-inline-xs">Log Out</span>
+                        </a>
+
+                    </div>
+                </div>
+        </div>
+        <!-- UI INCLUDES GLOBAL HEADER -->
+<div id="include-global-header">
+
+
+</div>
+
+                <!-- UI INCLUDES GLOBAL HEADER END-->
+    </header>
+    <aside id="sidebar">
+        <a id="lnkMenu" href="https://cpanel.tonohost.com/panel/indexpl.php" title="Home" class="active" data-toggle="tooltip" data-placement="right">
+            <i class="fa fa-2x fa-th" id="imgMenu"></i>
+        </a>
+        <a id="27160677368803469" href="https://cpanel.tonohost.com/panel/indexpl.php?option=upgrade-new&amp;ttt=-11360641724476416" title="Upgrade Plans" data-toggle="tooltip" data-placement="right">
+            <img width="28px" height="28px" src="./Mysql_files/pl-sidebar-upgrade.png">
+        </a>
+
+<br><br>
+<div style="position: float;left:100px; vertical-align:middle;">
+</div>
+    </aside>
+<style type="text/css">
+.spriteicon_img_mini {float:left;margin-right:5px;background: url("/panel/res/icon_sprites_img_scale_60percent.png");} #icon-mysql_mini {background-position:0 -1249px;width:27px;height:18px; }
+</style>
+
+<div id="content" style="height: auto !important;">
+<div class="body-content" style="height: auto !important;">
+
+        <h1 class="page-header">
+            <span id="icon-mysql_databases" class="page-icon icon-mysql_databases"></span>
+            <span id="pageHeading">MySQL Databases</span>
+            
+        </h1>
+    MySQL Databases allow you to store lots of information in an easy to access manner. The databases themselves are not easily read by humans. MySQL databases are required by many web applications including some bulletin boards, content management systems, and others. To use a database, you'll need to create it. Only your MySQL Username (same as your control panel login user) has privileges to access a database and read from or write to that database.
+<br><br>
+Create and remove MySQL databases for use on your account easily below
+	<style type="text/css">
+table {
+   font-size: 11px;
+}
+td {
+    font-size: 11px;
+}
+</style> 
+  
+<script language="Javascript1.2" src="./Mysql_files/functions.js.descarga"></script>
+
+
+<div class="secton" style="height: auto !important;">
+
+ <h2 id="hdrCreateDb">
+            Create New Database
+        </h2>
+   <div class="alert alert-warning">
+            <span class="glyphicon glyphicon-exclamation-sign"></span>
+            <div class="alert-message">
+Currently using <strong>1</strong> of <strong> 5 </strong>  available databases.
+
+            </div>
+</div>
+
+  <form method="post" action="https://cpanel.tonohost.com/panel/indexpl.php?option=mysql&amp;cmd=create" name="form1" id="mainform">
+            <div class="form-group">
+                <label id="lblDbName" for="dbname">
+                    New Database:
+                </label>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                ottos_26874369_
+                            </span>
+                            <input type="text" class="form-control" name="db" id="dbname" maxlength="54">
+                        </div>
+                        
+                    </div>
+                    <div id="dbname_error" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" id="submit_dbname" value="Create Database" class="btn btn-primary">
+            </div>
+        </form>
+      
+
+<div class="formbox" style="height: auto !important;">
+     <h2 id="hdrCreateDb">Delete a database</h2>
+        <div class="highlight">
+
+ <label id="lblDbName" for="dbname">
+DELETE Database                </label>
+
+      <form name="form2" method="post" action="https://cpanel.tonohost.com/panel/indexpl.php?option=mysql&amp;cmd=remove">
+<div class="form-group">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <select name="toremove" class="form-control" id="toremove">
+              ottos_26874369_mutante<option>ottos_26874369_mutante</option>            </select>
+</div> </div>
+<br>
+<div class="form-group">
+            <input class="btn btn-danger" type="submit" name="Submit2" value="Remove Database">
+          
+</div>
+        
+  </div></form>
+  </div>
+        
+
+
+<div class="formbox">
+<h2 id="hdrCreateDb"> Current Databases</h2>
+</div>
+ <table id="sql_db_tbl" class="sortable table table-striped" width="650">
+      <thead>
+      <tr>
+        <th class="cell clickable" align="left" scope="col">MySQL DB Name</th>
+        <th class="cell clickable" align="left" scope="col">MySQL User Name </th>
+        <th class="cell clickable" align="left" scope="col">MySQL Password </th>
+        <th class="cell clickable" align="left" scope="col">MySQL Host Name</th>
+        <th class="cell clickable" align="left" scope="col">PHPMyAdmin</th>
+      </tr>
+    </thead>
+    <tbody>
+                          
+		<tr><td><big>ottos_26874369_mutante</big></td><td><big>ottos_26874369</big></td><td><big><i>(Your vPanel Password)</i></big></td><td><big>sql101.tonohost.com</big></td><td><a class="btn btn-primary" href="http://185.27.134.10/login.php?2=ottos_26874369wejghelqwdtg3e54gVG1wbk5FMVVWVEpOVkVFeVRWaDNhRWxUUldoSldIZzRaa2g0T0daSWVEaG1TSGN5VFZSQmVsbFlVbkJoUjA1MVdWY3dQUT09wejghelqwdtg3e54gsql101.byetcluster.comwejghelqwdtg3e54gottos_26874369_mutante&amp;db=ottos_26874369_mutante" target="_blank">Admin</a>
+
+</td></tr> 
+      </tbody><tfoot></tfoot></table>
+
+
+ 
+
+		
+
+	   
+    
+  
+
+
+
+
+<table>
+<tbody><tr>
+<td>
+Experiencing issues with phpMyAdmin? Log out of your control panel, clear cookies and sessions [not available in all browsers] and log back into your control panel and try again..
+</td>
+
+</tr><tr><td>
+<br><br><hr>
+Did you know premium hosting allows you to create individual MySQL users and privileges? All premium accounts have upto 1GB of mysql storage.  
+To see a demo: <a class="btn btn-info" href="http://ifastnet.com/cpanelpreview2.php" target="_blank"> Click here</a><br>
+<br>
+Premium hosting MySQL server benefits :<br>
+- Create individual MySQL users.<br>
+- Set individual MySQL grants per user.<br>
+- Remote MySQL connections.<br>
+<br>
+Every paid hosting plan includes a free Top Level Domain name!<br>
+<a class="transition" href="https://cpanel.tonohost.com/panel/indexpl.php?option=upgrade" target="_blank">(Paid
+accounts have unlimited installs) Prices starting at only $3.99 per
+month</a>
+Find out more about Premium Hosting today!
+</td></tr></tbody></table>
+
+
+
+<footer style="height: auto !important; min-height: 0px !important;">
+    <!-- UI INCLUDES GLOBAL FOOTER -->
+        <!-- UI INCLUDES GLOBAL FOOTER END -->
+
+    <div class="container-fluid" style="height: auto !important;">
+<br>
+&nbsp;<script async="" src="./Mysql_files/f(8).txt"></script>
+<!-- Cpanel Bottom -->
+<ins class="adsbygoogle" style="display: block; height: 280px; width: 927px;" data-ad-client="ca-pub-2944264645217964" data-ad-slot="1121500741" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display: inline-table; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 927px; background-color: transparent;"><ins id="aswift_0_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 927px; background-color: transparent; overflow: hidden;"><iframe id="aswift_0" name="aswift_0" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 927px; height: 280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="927" height="280" frameborder="0" src="./Mysql_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-google-query-id="CIjPpeyaluwCFSIsfwodsZMMHg" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>        <div class="navbar">
+
+            <div class="navbar-brand" style="display:inline-block; z-index:2147483647; visibility:invisible;">
+                <a id="lnkPoweredByCpanel" href="http://www.cpanel.net/" target="cpanel" title="cPanel, Inc." style="display:inline-block; z-index:2147483647; visibility:visible;">
+                    <img id="imgPoweredByCpanel" src="./Mysql_files/powered_by_cpanel.png" alt="cPanel, Inc." style="display:inline-block; z-index:2147483647; visibility:visible;">
+                </a>
+                <sub id="txtCpanelVersion" style="display:inline-block; z-index:2147483647; visibility:visible;"></sub>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+        <script>
+            CPANEL.lang.Close=CPANEL.lang.close="Close";CPANEL.lang.cancel="Cancel";CPANEL.lang.unlimited="Unlimited";CPANEL.lang.or="or";CPANEL.lang.ajax_loading="Loading …";CPANEL.lang.password_generator="Password Generator";CPANEL.lang.generate_password="Generate Password";CPANEL.lang.advanced="Advanced Options";CPANEL.lang.confirm_copy_password="I have copied this password in a safe place.";CPANEL.lang.use_password="Use Password";CPANEL.lang.length="Length";CPANEL.lang.alpha_characters="Alpha Characters";CPANEL.lang.nonalpha_characters="Non Alpha Characters";CPANEL.lang.both="Both";CPANEL.lang.lowercase="Lowercase";CPANEL.lang.uppercase="Uppercase";CPANEL.lang.numbers="Numbers";CPANEL.lang.symbols="Symbols";CPANEL.lang.password_strength="Password Strength";CPANEL.lang.passwords_match="Passwords Match";CPANEL.lang.password_validator_no_spaces="Password cannot have spaces.";CPANEL.lang.password_validator_no_empty="Password cannot be empty.";CPANEL.lang.password_validator_no_match="Passwords do not match.";CPANEL.lang.Validation_Errors="Validation Errors";CPANEL.lang.strength_phrase_very_weak="Very Weak";CPANEL.lang.strength_phrase_weak="Weak";CPANEL.lang.strength_phrase_ok="OK";CPANEL.lang.strength_phrase_strong="Strong";CPANEL.lang.strength_phrase_very_strong="Very Strong";CPANEL.lang.click_to_close="Click to close.";CPANEL.lang.toggle_more="more »";CPANEL.lang.toggle_less="less »";CPANEL.lang.json_error=CPANEL.lang.Error="Error";CPANEL.lang.json_parse_failed="JSON parse failed.";CPANEL.lang.ajax_error="AJAX Error";CPANEL.lang.ajax_try_again="Please refresh the page and try again.";
+        </script>
+        
+
+<script type="text/javascript">
+    register_interfacecfg_nvdata('xmainrollstatus');
+    register_interfacecfg_nvdata('xmaingroupsorder');
+</script>
+
+         
+         <script>
+            PAGE.applicationList = [{"searchText":"File Manager file-manager","target":"file_manager","url":"filemanager\/index.html","name":"File Manager"},{"url":"cpanelpro\/images.html","name":"Images","searchText":"image manager resize manager scaler thumbnailer format Images"},{"searchText":"Directory Privacy passwordprotect password protect","url":"htaccess\/index.html","name":"Directory Privacy"},{"url":"diskusage\/index.html","name":"Disk Usage","searchText":"Disk Usage disk space usage disk-usage"},{"url":"ftp\/accounts.html","name":"FTP Accounts","searchText":"FTP Accounts ftp create"},{"name":"FTP Connections","url":"ftp\/session.html","searchText":"FTP Connections ftp accounts ftp session control"},{"searchText":"Backup restore","url":"backup\/index.html","name":"Backup"},{"url":"backup\/wizard.html","name":"Backup Wizard","searchText":"Backup Wizard restore"},{"name":"phpMyAdmin","url":"sql\/PhpMyAdmin.html","searchText":"phpMyAdmin database","target":"_blank"},{"searchText":"MySQL Databases MySQL® Databases","url":"sql\/index.html","name":"MySQL® Databases"},{"url":"sql\/wizard1.html","name":"MySQL® Database Wizard","searchText":"MySQL Database Wizard mysql database MySQL® Database Wizard"},{"searchText":"Remote MySQL Remote MySQL®","name":"Remote MySQL®","url":"sql\/managehost.html"},{"searchText":"PostgreSQL Databases postgres database postgresql","url":"psql\/index.html","name":"PostgreSQL Databases"},{"url":"psql\/wizard1.html","name":"PostgreSQL Database Wizard","searchText":"PostgreSQL Database Wizard postgres postgresql database"},{"url":"\/cpsess8049864136\/3rdparty\/phpPgAdmin\/index.php","name":"phpPgAdmin","searchText":"phpPgAdmin database psql","target":"_blank"},{"searchText":"Get In Google","url":"\/cpsess8049864136\/frontend\/paper_lantern\/attracta\/index.live.pl?id=31","name":"Get In Google"},{"url":"\/cpsess8049864136\/frontend\/paper_lantern\/attracta\/index.live.pl?id=32","name":"SEO Tools","searchText":"SEO Tools"},{"searchText":"Increase Website Traffic","name":"Increase Website Traffic","url":"\/cpsess8049864136\/frontend\/paper_lantern\/attracta\/index.live.pl?id=33"},{"name":"One-Click Sitemap","url":"\/cpsess8049864136\/frontend\/paper_lantern\/attracta\/index.live.pl?id=36","searchText":"One-Click Sitemap"},{"name":"Link Building","url":"\/cpsess8049864136\/frontend\/paper_lantern\/attracta\/index.live.pl?id=35","searchText":"Link Building"},{"name":"SEO Tips","url":"\/cpsess8049864136\/frontend\/paper_lantern\/attracta\/index.live.pl?id=37","searchText":"SEO Tips"},{"searchText":"Google Website Services","url":"\/cpsess8049864136\/frontend\/paper_lantern\/attracta\/index.live.pl?id=34","name":"Google Website Services"},{"url":"site_publisher\/index.html","name":"Site Publisher","searchText":"site publisher builder start website generator template Site Publisher"},{"name":"Addon Domains","url":"addon\/index.html","searchText":"Domains Addon domain Addon Domains"},{"url":"subdomain\/index.html","name":"Subdomains","searchText":"Subdomains domain"},{"url":"park\/index.html","name":"Aliases","searchText":"Aliases Parked domains domain"},{"name":"Redirects","url":"mime\/redirect.html","searchText":"Redirects rewrite modrewrite"},{"searchText":"Simple Zone Editor cname record a record DNS","url":"zoneedit\/simple.html","name":"Simple Zone Editor"},{"searchText":"Advanced Zone Editor aaaa srv txt ttl DNS CNAME","url":"zoneedit\/advanced.html","name":"Advanced Zone Editor"},{"url":"mail\/pops.html","name":"Email Accounts","searchText":"email accounts mail pop imap smtp Email Accounts"},{"searchText":"Forwarders forward","url":"mail\/fwds.html","name":"Forwarders"},{"name":"MX Entry","url":"mail\/mx.html","searchText":"MX Entry dns"},{"url":"mail\/autores.html","name":"Autoresponders","searchText":"Autoresponders autoresponder auto responders"},{"url":"mail\/def.html","name":"Default Address","searchText":"Default Address"},{"searchText":"Mailing Lists mailman","name":"Mailing Lists","url":"mail\/lists.html"},{"searchText":"Global Email Filters filter account level filtering","name":"Global Email Filters","url":"mail\/filters\/userfilters.html"},{"searchText":"User Filters Email user level Filtering filter Email Filters","url":"mail\/filters\/managefilters.html","name":"Email Filters"},{"url":"mail\/csvimport.html","name":"Address Importer","searchText":"Address Importer Import Addresses Forwarders Mail csv import xls import"},{"name":"Apache SpamAssassin™","url":"mail\/spam\/spam.html","searchText":"Spam Assassin spamassassin Apache SpamAssassin Apache SpamAssassin™"},{"url":"gpg\/index.html","name":"Encryption","searchText":"Encryption gpg keys GnuPG Keys"},{"name":"BoxTrapper","url":"mail\/boxtrapper.html","searchText":"BoxTrapper filter"},{"url":"mail\/calendars_and_contacts\/index.html","name":"Calendars and Contacts","searchText":"email calendar contact address book CalDAV CardDAV Calendars and Contacts"},{"url":"stats\/lastvisitors_landing.html","name":"Visitors","searchText":"latest visitors Visitors"},{"name":"Errors","url":"stats\/errlog.html","searchText":"Errors errorlog error log"},{"name":"Bandwidth","url":"stats\/bandwidth.html","searchText":"Bandwidth bandmin transfer"},{"name":"Raw Access","url":"raw\/index.html","searchText":"Raw Access logs raw logs rawlogs"},{"url":"stats\/awstats_landing.html","name":"Awstats","searchText":"Awstats awstats"},{"searchText":"Analog Stats","name":"Analog Stats","url":"stats\/analog_landing.html"},{"searchText":"Webalizer stats","name":"Webalizer","url":"stats\/webalizer_landing.html"},{"name":"Webalizer FTP","url":"stats\/webalizerftp_landing.html","searchText":"Webalizer FTP stats ftp"},{"searchText":"Metrics Editor stats manager choose log programs","url":"statmanager\/index.html","name":"Metrics Editor"},{"name":"CPU and Concurrent Connection Usage","url":"stats\/resourceusage.html","searchText":"CPU and Concurrent Connection Usage"},{"name":"Script Activity","url":"throttledscripts\/index.livephp","searchText":"Script Activity"},{"name":"IP Blocker","url":"denyip\/index.html","searchText":"IP Blocker ip deny manager"},{"searchText":"SSL\/TLS certificate key csr","name":"SSL\/TLS","url":"ssl\/index.html"},{"name":"Hotlink Protection","url":"mime\/hotlink.html","searchText":"Hotlink Protection"},{"searchText":"Leech Protection protect","url":"htaccess\/leechprotect\/leechprotect.html","name":"Leech Protection"},{"url":"security\/mod_security\/index.html","name":"ModSecurity","searchText":"ModSecurity mod security mod_security"},{"name":"Two-Factor Authentication","url":"security\/2fa\/index.html","searchText":"Two Factor Authentication 2fa tfa Two-Factor Authentication"},{"searchText":"SiteLock","url":"sitelock\/index.livephp","name":"SiteLock"},{"searchText":"Lets Encrypt SSL","url":"letsencrypt\/letsencrypt.live.cgi","name":"Lets Encrypt SSL"},{"searchText":"CloudFlare","name":"CloudFlare","url":"cloudflare\/index.live.php"},{"url":"module_installers\/index.html?lang=php-pear","name":"PHP PEAR Packages","searchText":"PHP PEAR Packages"},{"searchText":"Perl Modules","url":"module_installers\/index.html?lang=perl","name":"Perl Modules"},{"url":"module_installers\/index.html?lang=ruby","name":"RubyGems","searchText":"RubyGems ror ruby gems rails"},{"url":"ror\/index.html","name":"Ruby on Rails","searchText":"Ruby on Rails"},{"url":"sitereptile\/index.php","name":"SiteBuilder","searchText":"SiteBuilder"},{"searchText":"Softaculous Apps Installer","url":"softaculous\/index.live.php","name":"Softaculous Apps Installer"},{"url":"lveversion\/extension-selector.html.tt","name":"Select PHP Version","searchText":"Select PHP Version"},{"searchText":"Cron Jobs cronjob crontab edit","name":"Cron Jobs","url":"cron\/index.html"},{"url":"net\/index.html","name":"Track DNS","searchText":"Track DNS traceroute tracert dnslookup dig network tools"},{"searchText":"Indexes index manager","url":"indexmanager\/index.html","name":"Indexes"},{"name":"Error Pages","url":"err\/index.html","searchText":"Error Pages errorlog error_log error log"},{"url":"mime\/handle.html","name":"Apache Handlers","searchText":"Apache Handlers apache handlers extension configure"},{"url":"mime\/mime.html","name":"MIME Types","searchText":"MIME Types mimetype types"},{"name":"Password &amp; Security","url":"passwd\/index.html","searchText":"password &amp; security change facebook external google secure cpanel Password &amp; Security"},{"url":"setlang\/index.html","name":"Change Language","searchText":"language setlang Change Language"},{"searchText":"skin theme Change Style","url":"styleswitcher\/index.html","name":"Change Style"},{"searchText":"contact email Contact Information","url":"contact\/index.html","name":"Contact Information"},{"url":"user_manager\/index.html","name":"User Manager","searchText":"password change ftp email webdisk webdav service User Manager"},{"url":"softaculous\/index.live.php","name":"Softaculous Apps Installer","searchText":"Softaculous Apps Installer"},{"name":"Create New Ticket","url":"supnewticket\/index.livephp","searchText":"Create New Ticket"},{"name":"Show Support Tickets","url":"suplistopenticket\/index.livephp","searchText":"Show Support Tickets"},{"searchText":"Notifications","name":"Notifications","url":"home\/notifications.html.tt"}];
+        </script>
+		<script type="text/javascript">
+        if (("standalone" in window.navigator) && window.navigator.standalone) {
+            jQuery(document).ready(function($) {
+                $("a").click(function(event) {
+                    var alink = document.createElement('a');
+                    alink.href = $(this).attr("href");
+                    if (alink && alink.protocol.indexOf('http') !== -1 && alink.host.indexOf(document.location.host) !== -1) {
+                        event.preventDefault();
+                        window.location = alink.href;
+                    }
+                });
+            });
+        }
+		</script>
+
+        <script>
+            window.onload = function() {
+                var img = document.getElementById("imgPoweredByCpanel");
+                if(img === null ||
+                    img.getAttribute("src") !== "/panel/pl-res/powered_by_cpanel.png") {
+                    window.location="/";
+                }
+
+                
+                // focus feature search input
+                var featureSearchInput = document.getElementById("txtQuickFind");
+
+                if(featureSearchInput) {
+                    featureSearchInput.focus();
+                }
+                
+
+                
+            };
+        </script>
+
+    
+
+
+
+
+
+
+	<!-- Softaculous --><script src="./Mysql_files/index.live.php"></script><!-- Softaculous -->
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=2288747;
+var sc_invisible=1;
+var sc_security="6cc1e10a";
+var sc_https=1;
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script><script type="text/javascript" src="./Mysql_files/counter.js.descarga"></script>
+<noscript><div class="statcounter"><a title="web statistics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/2288747/0/6cc1e10a/1/"
+alt="web statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</div></div></div></div></div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./Mysql_files/ads(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_6112761007148" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Mysql_files/saved_resource(1).html"></iframe></body><iframe id="google_esf" name="google_esf" src="./Mysql_files/zrt_lookup.html" data-ad-client="ca-pub-2944264645217964" style="display: none;"></iframe></html>
